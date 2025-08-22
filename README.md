@@ -1,19 +1,19 @@
 
-# Project Title
+# 📜Project Title
 
 EvoXart: Evolution + Art
-## Description
+## 📝Description
 
 EvoXart is a project where my evolution of art over the years are displayed like a museum in an interactive infinite menu.
-## Acknowledgements
+## 🫱🏼‍🫲🏽Acknowledgements
 
 https://www.reactbits.dev/
 
 
-## Tech Stack
+## 💻Tech Stack
 
-Next.js and Tailwind CSS
-## Creator
+Next.js, Tailwind CSS, and Cloudinary CDN
+## 👤Creator
 
 - https://github.com/veer-kat
 - https://www.linkedin.com/in/veer-katrodia-69b29221b
