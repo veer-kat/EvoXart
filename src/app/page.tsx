@@ -1,103 +1,122 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import InfiniteMenu from '../components/InfiniteMenu';
+
+const items = [
+  {
+    image: '/anna.jpeg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836732/anna_rjawfv.jpg',
+    title: 'Kokonut',
+    description: 'A shell-crafted, tropical, coastal creation.'
+  },
+  {
+    image: '/ariana.jpeg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836732/ariana_hntqw4.jpg',
+    title: 'Ariana Grande',
+    description: '2016, was pretty successful for Ariana Grande'
+  },
+  {
+    image: '/coc1.jpeg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836732/coc1_wjvcdt.jpg',
+    title: 'Clash of Clans',
+    description: 'The Og Barbarian!'
+  },
+  {
+    image: 'coc2.jpeg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836731/coc2_hvdrt2.jpg',
+    title: 'COC troops',
+    description: 'Minion & Baby Dragon FTW'
+  },
+  {
+    image: 'deep.jpeg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836732/deep_izdvon.jpg',
+    title: 'Don\'t look up',
+    description: 'Just playing with some colors'
+  },
+  {
+    image: 'doodle.jpeg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836732/doodle_bqm1kd.jpg',
+    title: 'Doodle days',
+    description: 'Fun, incomplete doodles🫣'
+  },
+  {
+    image: 'eyes.jpeg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836733/eyes_ksjlkc.jpg',
+    title: 'True art',
+    description: 'Udemy teaches a lot ig'
+  },
+  {
+    image: 'groot.jpeg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836732/groot_ak2ka7.jpg',
+    title: 'Marvel Groot',
+    description: 'I am Groot!'
+  },
+  {
+    image: 'intermediate.jpeg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836731/intermediate_w17kun.jpg',
+    title: 'Intermediate exam',
+    description: 'Verification of art skills is important'
+  },
+  {
+    image: 'kaiju.jpeg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836732/kaiju_ufliom.jpg',
+    title: 'Kaiju',
+    description: 'One of my favourite Sci-Fi movie; Pacific Rim'
+  },
+  {
+    image: 'man.jpeg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836732/man_fxam42.jpg',
+    title: 'Normal man',
+    description: 'Depiction of a normal day'
+  },
+  {
+    image: 'pokemon.jpeg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836731/pokemon_e015ab.jpg',
+    title: 'Pokemon',
+    description: 'Gotta catch \'em all!'
+  },
+  {
+    image: 'pug.jpeg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836732/pug_xtyr4g.jpg',
+    title: 'Sophie the pug',
+    description: 'My first pet ever'
+  },
+  {
+    image: 'shadows.jpeg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836731/shadows_bwwzkq.jpg',
+    title: 'From the abyss',
+    description: 'This is pretty cool, right?'
+  },
+  {
+    image: 'stilllife.jpeg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836731/stilllife_ghyuqb.jpg',
+    title: 'Still life',
+    description: 'Timepass activity'
+  },
+  {
+    image: 'surrealism.jpeg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836731/surrealism_fxfrsn.jpg',
+    title: 'Surrealism',
+    description: 'Trap into my \neyes watching reels?'
+  },
+  {
+    image: 'thanos.jpeg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836731/thanos_gsfgq2.jpg',
+    title: 'Thanos',
+    description: 'Malnourished Thanos \nfrom another multiverse😅'
+  },
+  {
+    image: 'Skeleton.jpg',
+    link: 'https://res.cloudinary.com/dtzzrtibc/image/upload/v1755836893/Skeleton_irlh7p.jpg',
+    title: 'Digital art',
+    description: 'First digital art, Skeleart?'
+  }
+];
+
+export default function Page() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div style={{ height: '600px', position: 'relative' }}>
+      <InfiniteMenu items={items}/>
     </div>
   );
 }
