@@ -115,7 +115,7 @@ const items = [
 
 export default function Page() {
   return (
-    <div style={{ height: '600px', position: 'relative' }}>
+    <div style={{ height: '100vh', position: 'relative' }}>
       <InfiniteMenu items={items}/>
     </div>
   );
